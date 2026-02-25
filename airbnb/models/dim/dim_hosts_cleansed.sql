@@ -16,6 +16,10 @@ SELECT
     host_name,
     'Anonymous'
   ) AS host_name,
+  -- CASE
+  --   WHEN is_superhost = 't' THEN true
+  --   ELSE false
+  -- END AS is_superhost,
   is_superhost,
   created_at,
   updated_at
