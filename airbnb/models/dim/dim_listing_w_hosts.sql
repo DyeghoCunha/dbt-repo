@@ -1,5 +1,5 @@
 {{ config(
-  materialized = 'view',
+  materialized = 'table',
   on_schema_change = 'fail'
 ) }}
 
@@ -12,7 +12,7 @@ WITH l AS (
 ),
 h AS (
   SELECT
-    *
+    * 
   FROM
     {{ ref('dim_hosts_cleansed') }}
 )
